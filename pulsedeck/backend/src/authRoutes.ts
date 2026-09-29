@@ -25,8 +25,8 @@ router.post(
       const passwordHash = await bcrypt.hash(password, saltRounds);
       const result = await pool.query(
         `INSERT INTO users (email, password_hash)
-VALUES ($1, $2)
-RETURNING id, email`,
+         VALUES ($1, $2)
+         RETURNING id, email`,
         [email, passwordHash],
       );
       res.status(201).json({

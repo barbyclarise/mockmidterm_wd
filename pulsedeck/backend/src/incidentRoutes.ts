@@ -5,6 +5,7 @@ import { type Incident } from "./type";
 import { validateResource } from "./validate";
 import { createIncidentSchema, updateIncidentSchema } from "./schemas";
 import { authenticateToken } from "./authMiddleware";
+
 const router = Router();
 // Every route below requires a valid JWT
 router.use(authenticateToken);

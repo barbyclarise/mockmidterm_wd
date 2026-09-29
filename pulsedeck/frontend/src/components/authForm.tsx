@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import { login, register } from "../api/authService";
 import { Form, Input, Button } from "./styles";
+
 export const AuthForm: React.FC = () => {
   const context = useContext(AuthContext);
   if (!context) throw new Error("AuthForm must be used within AuthProvider");
